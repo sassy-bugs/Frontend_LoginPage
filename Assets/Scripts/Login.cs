@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class Login : MonoBehaviour
     [SerializeField] private Button loginButton;
     [SerializeField] private TMP_InputField usernameInputField;
     [SerializeField] private TMP_InputField passwordInputField;
+
+    public static string userID;
 
    public void onLoginClick()
    {
@@ -63,6 +66,10 @@ public class Login : MonoBehaviour
                 loginButton.interactable = false;
                 GameAccount returnedAccount = JsonUtility.FromJson<GameAccount>(request.downloadHandler.text);
                 alertText.text= "Welcome "+ returnedAccount.username + ((returnedAccount.adminFlag == 1) ? " Admin": "");
+                
+                userID=returnedAccount._id;
+                SceneManager.LoadScene(1);
+
                 }
             else
             {
