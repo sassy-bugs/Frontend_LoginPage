@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c050dc3c54194949bf0b15a121da918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  authenticationEndpoint: http://localhost:13756/account
+  authenticationEndpoint: https://backend-server-9vsy.onrender.com/account
   alertText: {fileID: 886614883}
   loginButton: {fileID: 1207244653}
   usernameInputField: {fileID: 1129584005}

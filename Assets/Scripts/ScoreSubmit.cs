@@ -7,21 +7,19 @@ using UnityEngine.Networking;
 
 public class ScoreSubmit : MonoBehaviour
 {
-    //public Login script;
+    
 
     public int score;
     public TextMeshProUGUI scoreText;
     public Button submitScore;
     public string username ;
-    //ScoreAccount returnedAccount ;
-    //public Login script;
-    //public GameAccount obj;
+    
 
-    [SerializeField] private string scoreEndpoint = "http://localhost:13756/score";
-    public void start()
-    {
-        //script = obj.GetComponent<Login>();
-    }
+    [SerializeField] private string scoreEndpoint = "https://backend-server-9vsy.onrender.com/score";
+    // public void start()
+    // {
+        
+    // }
     void Update()
     {
         scoreText.text = score.ToString();

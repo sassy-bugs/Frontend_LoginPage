@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Login : MonoBehaviour
 {
-    [SerializeField] private string authenticationEndpoint = "http://localhost:13756/account";
+    [SerializeField] private string authenticationEndpoint = "https://backend-server-9vsy.onrender.com/account";
     
     [SerializeField] private TextMeshProUGUI alertText;
     [SerializeField] private Button loginButton;
