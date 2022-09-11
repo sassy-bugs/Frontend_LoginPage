@@ -15,7 +15,7 @@ public class Login : MonoBehaviour
     [SerializeField] private TMP_InputField usernameInputField;
     [SerializeField] private TMP_InputField passwordInputField;
 
-    public static string userID;
+    public static string username1 = "Sample";
 
    public void onLoginClick()
    {
@@ -67,7 +67,7 @@ public class Login : MonoBehaviour
                 GameAccount returnedAccount = JsonUtility.FromJson<GameAccount>(request.downloadHandler.text);
                 alertText.text= "Welcome "+ returnedAccount.username + ((returnedAccount.adminFlag == 1) ? " Admin": "");
                 
-                userID=returnedAccount._id;
+                username1=returnedAccount.username;
                 SceneManager.LoadScene(1);
 
                 }
